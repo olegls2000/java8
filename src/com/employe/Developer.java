@@ -8,5 +8,6 @@ public class Developer extends Employ {
     this.salary = salary;
     this.name = name;
     this.languages = languages;
+    System.out.println("Hello");
   }
 }
