@@ -12,6 +12,7 @@ public class Passenger extends AbstractCar {
 
     public Passenger(int releaseDate, int techState, Manufacturer manufacturer, int seats) {
         super(releaseDate, techState, manufacturer);
+        seatsCheck(seats);
         this.seats = seats;
     }
 
@@ -21,11 +22,17 @@ public class Passenger extends AbstractCar {
         return this.seats * SEATS_RATE - getAge() * AGE_RATE + super.getTechState() * TECH_STATE_RATE;
     }
 
+    //add seats number 4..7 validation!!!
+    private void seatsCheck(int seats){
+        //TODO at home
+    }
+
     public int getSeats() {
         return seats;
     }
 
     public void setSeats(int seats) {
+        seatsCheck(seats);
         this.seats = seats;
     }
 }

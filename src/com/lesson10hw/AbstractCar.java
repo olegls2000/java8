@@ -7,6 +7,7 @@ public abstract class AbstractCar {
     protected static final int AGE_RATE = 8;
     protected static final int TECH_STATE_RATE = 100;
 
+
     private int releaseDate;
     private int techState;
     private Manufacturer manufacturer;
@@ -25,6 +26,16 @@ public abstract class AbstractCar {
 
     protected int getAge(){
         return LocalDate.now().getYear() - releaseDate;
+    }
+
+    //not older then 20 years!!!!
+    private void ageCheck(int releaseYear){
+        //TODO at home
+    }
+
+    //1..9
+    private void techStateCheck(int techState){
+        //TODO at home
     }
 
     public int getReleaseDate() {

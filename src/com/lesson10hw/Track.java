@@ -1,7 +1,5 @@
 package com.lesson10hw;
 
-import java.time.LocalDate;
-
 public class Track extends AbstractCar {
 
     private static final int LOAD_RATE = 15;
@@ -25,6 +23,36 @@ public class Track extends AbstractCar {
     public long evaluatePrice() {
         return getAge() * AGE_RATE + super.getTechState() * TECH_STATE_RATE + load * LOAD_RATE;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (obj.getClass() != Track.class) {
+            return false;
+        }
+
+        final Track custedObject = (Track) obj;
+
+        if (custedObject.getLoad() != this.getLoad()) {
+            return false;
+        }
+
+        if (custedObject.getTechState() != this.getTechState()) {
+            return false;
+        }
+        if (custedObject.getManufacturer() != this.getManufacturer()) {
+            return false;
+        }
+
+        if (custedObject.getReleaseDate() != this.getReleaseDate()) {
+            return false;
+        }
+
+        return true;
+    }
+
 
     public int getLoad() {
         return load;
