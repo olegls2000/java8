@@ -45,4 +45,9 @@ public class AmservAutoSalon implements AutoSalon {
         balance +=0;
         return 0;
     }
+
+    @Override
+    public void report() {
+        //TODO at home
+    }
 }

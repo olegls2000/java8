@@ -4,6 +4,7 @@ import com.animal.Fox;
 import com.animal.WithLifeDuration;
 import com.animal.Wolf;
 import com.employe.Developer;
+import com.lesson10hw.AbstractCar;
 import com.shape.Circle;
 import com.shape.Square;
 import com.shape.Triangle;
@@ -46,7 +47,6 @@ public class Lesson10 {
         for (WithLifeDuration animal : animals) {
             animal.printLifeDuration();
         }
-
 
         Fox[] foxes = null;
         Wolf[] wolves = null;

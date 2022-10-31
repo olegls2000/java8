@@ -14,6 +14,8 @@ public class Lesson10HomeWork {
 
         final AutoSalon amservAuto = new AmservAutoSalon(150_000l);
         amservAuto.bayCar(passenger1);
+        amservAuto.sellCar(0);
+        amservAuto.report();
 
 
     }

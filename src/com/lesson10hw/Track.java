@@ -3,6 +3,9 @@ package com.lesson10hw;
 import java.time.LocalDate;
 
 public class Track extends AbstractCar {
+
+    private static final int LOAD_RATE = 15;
+
     private int load;
 
     public Track() {
@@ -20,10 +23,7 @@ public class Track extends AbstractCar {
 
     @Override
     public long evaluatePrice() {
-        int carAge = LocalDate.now().getYear() - getReleaseDate();
-        long price = carAge * 8 + super.getTechState() * 100 + load * 15;
-
-        return price;
+        return getAge() * AGE_RATE + super.getTechState() * TECH_STATE_RATE + load * LOAD_RATE;
     }
 
     public int getLoad() {
