@@ -1,7 +1,7 @@
 package com.lesson10hw;
 
 public interface AutoSalon {
-    int bayCar(AbstractCar car);
+    long bayCar(AbstractCar car);
 
-    int sellCar(int parkingPlace);
+    long sellCar(int parkingPlace);
 }

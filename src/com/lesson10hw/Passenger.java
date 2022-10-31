@@ -10,6 +10,11 @@ public class Passenger extends AbstractCar {
         System.out.println("Hello from Passenger constructor");
     }
 
+    public Passenger(int releaseDate, int techState, Manufacturer manufacturer, int seats) {
+        super(releaseDate, techState, manufacturer);
+        this.seats = seats;
+    }
+
     //Легкового: ПассажироМеста*КоэфПассажиромест - возрастАвтомобиля*КоэфВозраста+техничСостояние*КоэфТехнСостояния
     @Override
     public long evaluatePrice() {

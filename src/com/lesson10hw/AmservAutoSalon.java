@@ -10,14 +10,39 @@ public class AmservAutoSalon implements AutoSalon {
     }
 
     @Override
-    public int bayCar(AbstractCar car) {
-       final long evaluatedPrice = car.evaluatePrice();
-
-        return 0;
+    public long bayCar(AbstractCar car) {
+        final long evaluatedPrice = car.evaluatePrice();
+        if (isBalanceSufficient(evaluatedPrice) && isParkingPlaceAvailable()) {
+            balance -= evaluatedPrice;
+            parking[getFreeParkingPlace()] = car;
+            return evaluatedPrice;
+        }
+        return -1;
+    }
+    private boolean isBalanceSufficient(long carPrice) {
+        return this.balance < carPrice;
+    }
+    private boolean isParkingPlaceAvailable() {
+        for (AbstractCar car : parking) {
+            if (car == null) {
+                return true;
+            }
+        }
+        return false;
+    }
+    private int getFreeParkingPlace() {
+        for (int i = 0; i < parking.length; i++) {
+            if (parking[i] == null) {
+                return i;
+            }
+        }
+        throw new RuntimeException("No Free Places!!!");
     }
 
     @Override
-    public int sellCar(int parkingPlace) {
+    public long sellCar(int parkingPlace) {
+        //TODO at home
+        balance +=0;
         return 0;
     }
 }
