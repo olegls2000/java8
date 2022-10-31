@@ -1,7 +1,7 @@
 package com.lesson6;
 
 import com.employe.Developer;
-import com.employe.Employ;
+import com.employe.AbstractEmploy;
 import com.employe.QA;
 
 public class Lesson6 {
@@ -28,17 +28,17 @@ public class Lesson6 {
       System.out.println(maxSalaryQA.getName() + " has a Max salary");
     }
 
-    Employ[] employies = new Employ[4];
+    AbstractEmploy[] employies = new AbstractEmploy[4];
     employies[0] = dev1;
     employies[1] = dev2;
     employies[2] = new QA(15_000, "Diana", "Q");
     employies[3] = qa2;
-    Employ employMaxSalary = getEmployWithMaxSalary(employies);
+    AbstractEmploy employMaxSalary = getEmployWithMaxSalary(employies);
 
 
   }
-  public static Employ getEmployWithMaxSalary(Employ[] employs) {
-    Employ result = employs[0];
+  public static AbstractEmploy getEmployWithMaxSalary(AbstractEmploy[] employs) {
+    AbstractEmploy result = employs[0];
     for (int i = 0; i < employs.length; i++) {
       if (employs[i].getSalary() > result.getSalary()) {
         result = employs[i];

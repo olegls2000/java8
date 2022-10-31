@@ -18,12 +18,12 @@ public class Triangle implements WithPerimeter {
 
     @Override
     public double calculatePerimeter() {
-        //TODO ...
-        return 0;
+        return a + b + c;
     }
 
+    @Override
     public void printPerimeter() {
-        //TODO ..
+        System.out.println("Triangle perimeter is: " + calculatePerimeter());
     }
 
     public void setA(int a) {
@@ -56,5 +56,9 @@ public class Triangle implements WithPerimeter {
             System.out.println("Invalid sides combination!");
             throw new RuntimeException("Invalid sides combination");
         }
+    }
+
+    public void triangleSpecificMethod() {
+        System.out.println("hello from Triangle");
     }
 }

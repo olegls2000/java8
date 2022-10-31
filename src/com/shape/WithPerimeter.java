@@ -1,8 +1,8 @@
 package com.shape;
 
 public interface WithPerimeter {
-    // Always public!!!!!
-    public double calculatePerimeter();
-    // Always public!!!!!
-    public void printPerimeter();
+
+    double calculatePerimeter();
+
+     void printPerimeter();
 }

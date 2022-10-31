@@ -4,7 +4,7 @@ package com.shape;
 import static com.util.Utils.getRandomNumberFromInterval;
 
 public class Square implements WithPerimeter, WithArea {
-    public int side;
+    private int side;
 
     public Square() {
         this.side = getRandomNumberFromInterval(20, 100);

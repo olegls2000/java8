@@ -19,7 +19,7 @@ public class Lesson6HW {
         System.out.println("circle2 perimeter is: " + circle2.calculatePerimeter());
 
         Square square222 = new Square();
-        square222.side = 66;
+        //square222.side = 66;
         System.out.println(square222.calculateArea());
         Square square333 = new Square(66);
         System.out.println(square333.calculateArea());

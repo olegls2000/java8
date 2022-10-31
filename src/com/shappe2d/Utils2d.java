@@ -2,6 +2,8 @@ package com.shappe2d;
 
 public class Utils2d {
 
+  public static final int DAY_OF_WEEKS = 7;
+
   private Utils2d() {
     throw new RuntimeException("Object invalid!");
   }
