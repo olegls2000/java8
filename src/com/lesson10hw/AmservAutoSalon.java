@@ -10,27 +10,34 @@ public class AmservAutoSalon implements AutoSalon {
     }
 
     @Override
-    public long bayCar(AbstractCar car) {
+    public long bayCar(AbstractCar car) throws BalanceException, ParkingException {
         final long evaluatedPrice = car.evaluatePrice();
-        if (isBalanceSufficient(evaluatedPrice) && isParkingPlaceAvailable()) {
-            balance -= evaluatedPrice;
-            parking[getFreeParkingPlace()] = car;
-            return evaluatedPrice;
+        //try {
+            isBalanceSufficient(evaluatedPrice);
+        //} catch (Exception e) {
+        //    System.out.println("Handled!!!" + e.getMessage());
+        //}
+
+        isParkingPlaceAvailable();
+        balance -= evaluatedPrice;
+        parking[getFreeParkingPlace()] = car;
+
+        return evaluatedPrice;
+    }
+
+    private void isBalanceSufficient(long carPrice) throws BalanceException{
+        if (this.balance < carPrice) {
+            throw new BalanceException(this.balance);
         }
-        return -1;
     }
 
-    private boolean isBalanceSufficient(long carPrice) {
-        return this.balance > carPrice;
-    }
-
-    private boolean isParkingPlaceAvailable() {
-        for (AbstractCar car : parking) {
-            if (car == null) {
-                return true;
+    private void isParkingPlaceAvailable() throws ParkingException{
+        for (AbstractCar slot : parking) {
+            if (slot == null) {
+                return;
             }
         }
-        return false;
+        throw new ParkingException(parking.length);
     }
 
     private int getFreeParkingPlace() {
@@ -51,7 +58,7 @@ public class AmservAutoSalon implements AutoSalon {
         if (carToSell == null) {
             throw new RuntimeException("No car on the mentioned parking slot number!!");
         }
-        final long sellPrice = (carToSell.evaluatePrice() * 15/100) + carToSell.evaluatePrice();
+        final long sellPrice = (carToSell.evaluatePrice() * 15 / 100) + carToSell.evaluatePrice();
         balance += sellPrice;
         parking[parkingPlace] = null;
 
