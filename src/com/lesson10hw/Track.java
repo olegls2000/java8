@@ -21,7 +21,7 @@ public class Track extends AbstractCar {
 
     @Override
     public long evaluatePrice() {
-        return getAge() * AGE_RATE + super.getTechState() * TECH_STATE_RATE + load * LOAD_RATE;
+        return getAge(this.getReleaseDate()) * AGE_RATE + super.getTechState() * TECH_STATE_RATE + load * LOAD_RATE;
     }
 
     @Override

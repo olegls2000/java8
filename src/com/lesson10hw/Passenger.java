@@ -19,7 +19,7 @@ public class Passenger extends AbstractCar {
     //Легкового: ПассажироМеста*КоэфПассажиромест - возрастАвтомобиля*КоэфВозраста+техничСостояние*КоэфТехнСостояния
     @Override
     public long evaluatePrice() {
-        return this.seats * SEATS_RATE - getAge() * AGE_RATE + super.getTechState() * TECH_STATE_RATE;
+        return this.seats * SEATS_RATE - getAge(this.getReleaseDate()) * AGE_RATE + super.getTechState() * TECH_STATE_RATE;
     }
 
     //add seats number 4..7 validation!!!
