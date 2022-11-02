@@ -14,26 +14,70 @@ public class Lesson12 {
             amserv.bayCar(track2);
             amserv.sellCar(1);
             amserv.sellCar(0);
-        }
-
-        catch (BalanceException exception) {
+        } catch (BalanceException exception) {
 
             sendWarningEmailToAccountant(exception.getBalance());
 
-        }
-        catch (ParkingException exception) {
+        } catch (ParkingException exception) {
 
             sendWarningEmailToParking(exception.getSlotsCount());
 
-        }
-        catch (Exception commonEx) {
+        } catch (Exception commonEx) {
             System.out.println("Handling for more common Exceptions!!!");
-        }
-        finally {
+        } finally {
             amserv.report();
         }
 
         testMethod();
+
+        // String!!!!!
+        String strA = new String("Hello");
+        String strB = new String("Hello");
+        String str1 = "Hello";
+        String str2 = "Hello";
+
+        System.out.println(strA == strB);      //false
+
+        System.out.println(strA.equals(strB)); //true
+
+        System.out.println(str1 == str2);      //true
+
+        String summary = str1 + " my " + "friend. I'll come at: " + (8 + 1 > 9 - 1) + " p.m.";
+        System.out.println(summary);
+
+        String toMutate = "Want";
+        String resultString = toMutate.concat(" to see ..");
+        System.out.println(resultString);
+
+        StringBuffer stringBuffer = new StringBuffer();
+        stringBuffer.append("Want");
+        stringBuffer.append(" ");
+        stringBuffer.append("to see");
+        stringBuffer.append(" ..");
+        stringBuffer.append(" ");
+        System.out.println(stringBuffer.toString());
+
+
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("Want");
+        stringBuilder.append(" ");
+        stringBuilder.append("to see");
+        stringBuilder.append(" ..");
+        stringBuilder.append(" ");
+        System.out.println("from StringBuilder: " + stringBuffer.toString());
+
+        System.out.println(track1);
+        System.out.println(track2);
+
+        String testString = "Hello my friend. Where are you?";
+        testString = testString.replace(".", " ");
+        testString = testString.replace("?", " ");
+        String[] splittedString = testString.split(" ");
+        System.out.println(splittedString.length);
+
+
+
+
     }
 
     private static void sendWarningEmailToParking(int places) {
@@ -44,11 +88,11 @@ public class Lesson12 {
         System.out.println("We have only" + restBalance + " EUR");
     }
 
-    private static int testMethod(){
+    private static int testMethod() {
         try {
             System.out.println("Hello");
             return 0;
-        } catch (Exception e){
+        } catch (Exception e) {
 
         } finally {
             System.out.println("Hello from finally");

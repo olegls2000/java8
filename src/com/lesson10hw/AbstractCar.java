@@ -65,4 +65,12 @@ public abstract class AbstractCar {
     public void setManufacturer(Manufacturer manufacturer) {
         this.manufacturer = manufacturer;
     }
+
+    @Override
+    public String toString() {
+        return  "releaseDate=" + releaseDate +
+                ", techState=" + techState +
+                ", manufacturer=" + manufacturer +
+                '}';
+    }
 }

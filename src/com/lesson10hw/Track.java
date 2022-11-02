@@ -53,6 +53,12 @@ public class Track extends AbstractCar {
         return true;
     }
 
+    @Override
+    public String toString() {
+        return "Track{" +
+                "load=" + load +
+                " " + super.toString();
+    }
 
     public int getLoad() {
         return load;
