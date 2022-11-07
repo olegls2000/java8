@@ -53,7 +53,7 @@ public class Triangle implements WithPerimeter {
 
     private void checkCombination(int sideA, int sideB, int sideC) {
         if (sideA + sideB <= sideC || sideB + sideC <= sideA || sideA + sideC <= sideB) {
-            System.out.println("Invalid sides combination!");
+            System.out.println("Invalid combination!");
             throw new RuntimeException("Invalid sides combination");
         }
     }
