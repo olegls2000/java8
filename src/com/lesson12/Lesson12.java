@@ -57,7 +57,6 @@ public class Lesson12 {
         stringBuffer.append(" ");
         System.out.println(stringBuffer.toString());
 
-
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("Want");
         stringBuilder.append(" ");
@@ -74,10 +73,6 @@ public class Lesson12 {
         testString = testString.replace("?", " ");
         String[] splittedString = testString.split(" ");
         System.out.println(splittedString.length);
-
-
-
-
     }
 
     private static void sendWarningEmailToParking(int places) {

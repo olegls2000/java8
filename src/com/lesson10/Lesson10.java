@@ -5,15 +5,12 @@ import com.animal.WithLifeDuration;
 import com.animal.Wolf;
 import com.employe.Developer;
 import com.lesson10hw.AbstractCar;
-import com.shape.Circle;
-import com.shape.Square;
-import com.shape.Triangle;
-import com.shape.WithPerimeter;
+import com.shape.*;
 
 import static com.shappe2d.Utils2d.DAY_OF_WEEKS;
 
 public class Lesson10 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws MyCustomException {
         WithPerimeter triangle = new Triangle(5, 5, 5);
         double p1 = triangle.calculatePerimeter();
         //triangle.triangleSpecificMethod();
