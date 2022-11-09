@@ -119,4 +119,21 @@ RTRTRT
 
         return stringBuilder.toString().trim();
     }
+
+    public static void printString(String string) {
+        System.out.println(string);
+    }
+
+    public static void printString(String string, String string2 ) {
+        System.out.println(string);
+        System.out.println(string2);
+    }
+
+    public static void printVarArgs(String ... strings) {
+        System.out.println(strings);
+        for (String str: strings) {
+            System.out.print(str);
+        }
+
+    }
 }
