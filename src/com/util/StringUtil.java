@@ -75,4 +75,31 @@ public final class StringUtil {
             }
         }
     }
+
+    /*
+
+1. Create a method that replaces in the String all ":" by ";"
+and prints out a quantity of such replacements. Place the method into StringUtils class
+     */
+
+    public static String replaceAndCount(String sentence) {
+        int count = 0;
+        for (int i = 0; i < sentence.length(); i++) {
+            final char symbol = sentence.charAt(i);
+            if (symbol == ':') {
+                count++;
+            }
+        }
+
+        System.out.println("Number of replacements is: " + count);
+
+        return sentence.replace(":", ";");
+    }
+
+    /*
+
+2. Создайте метод, который принимает в параметр строку и число к. В каждом слове текста k-ю букву заменить заданным символом.
+Если k больше длины слова, корректировку не выполнять.
+     */
+
 }
