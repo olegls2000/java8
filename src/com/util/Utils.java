@@ -59,7 +59,7 @@ public class Utils {
         return result;
     }
 
-    public static int getSummFromVarArg(int... integers) {
+    public static int getSummFromVarArg( int ... integers) {
         int sum = 0;
         for (Integer number : integers) {
             sum += number;// sum = sum + number;

@@ -15,7 +15,7 @@ public class Lesson13HW {
                 StringUtil.replaceByIndex("Hi I Am Joe", 2, 'X');
         System.out.println(replacedByIndexString); //"Hi I Am JoX"
         StringUtil.printVarArgs("Hi", " my", " friend.");
-        int summ = Utils.getSummFromVarArg(1, 0, 0, 0, 0, 787);
+        int summ = Utils.getSummFromVarArg(1, 0, 0, 0, 0 );
         System.out.println("Summ = " + summ);
     }
 }
