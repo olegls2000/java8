@@ -33,7 +33,7 @@ public class Lesson3HW {
     //  2
     maxMinElementSwap(array2);
 
-    int[][] array2DInit = {{3, 4, 5, 7, 7, 6}, {6, 4, 3, 9, 0}, {3, 3, 3, 2}};
+    Integer[][] array2DInit = {{3, 4, 5, 7, 7, 6}, {6, 4, 3, 9, 0}, {3, 3, 3, 2}};
     Utils.print2dArray(array2DInit);
     int[][] array2D = new int[2][2];
   }

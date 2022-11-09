@@ -4,7 +4,7 @@ public class Utils {
 
   public static int smth = 0;
 
-  public static void printArray(int[] array) {
+  public static <T> void printArray(T[] array) {
     System.out.print("[");
     for (int k = 0; k < array.length; k++) {
       System.out.print(array[k]);
@@ -17,7 +17,7 @@ public class Utils {
     System.out.println();
   }
 
-  public static void printArrayRevers(int[] array) {
+  public static <T> void printArrayRevers(T[] array) {
     System.out.print("[");
     for (int k = array.length-1; k >= 0; k--) {
       System.out.print(array[k]);
@@ -29,10 +29,10 @@ public class Utils {
     System.out.println();
   }
 
-  public static void print2dArray(int[][] array2d){
+  public static <T> void print2dArray(T[][] array2d){
     System.out.print("[");
     for (int i = 0; i < array2d.length; i++) {
-      int[] element = array2d[i];
+      final T[] element = array2d[i];
       System.out.print("[");
       for (int j = 0; j < element.length; j++) {
         System.out.print(array2d[i][j]);
@@ -46,8 +46,8 @@ public class Utils {
     System.out.print("]");
   }
 
-  public static int[] generateArray(int length, int from, int till) {
-    int[] result = new int[length];
+  public static Integer[] generateArray(int length, int from, int till) {
+    Integer[] result = new Integer[length];
     for (int i = 0; i < result.length; i++) {
       result[i] = getRandomNumberFromInterval(from, till);
     }
