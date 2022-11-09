@@ -24,6 +24,7 @@ public final class StringUtil {
                 .replace("?", " ")
                 .replace(".", " ")
                 .replace(",", " ")
+                .replace(":", ";")
                 .trim();
     }
 
@@ -70,6 +71,26 @@ public final class StringUtil {
             if (clearedWord.contains("T")) {
                 System.out.println(clearedWord.toLowerCase());
             }
+        }
+    }
+
+    public static void replaceChar(String sentence) {
+        final String[] words = sentence.split(" ");
+        if (sentence.contains(":")) {
+            String result = sentence.replace(":", ";");
+            System.out.println(result);
+        }
+    }
+
+    public static void replaceChark(String replaceChar) {
+        final String[] words = replaceChar.split(" ");
+        int k = 1;
+        if (replaceChar.contains("K")) {
+            String resultd = replaceChar.replace("K", "Q");
+            System.out.println(resultd + k);
+        }
+        for (int i = 0; i < replaceChar.length(); i++) {
+            if ()
         }
     }
 }
