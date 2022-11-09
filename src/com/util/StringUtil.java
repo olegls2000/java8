@@ -98,8 +98,25 @@ and prints out a quantity of such replacements. Place the method into StringUtil
 
     /*
 
-2. Создайте метод, который принимает в параметр строку и число к. В каждом слове текста k-ю букву заменить заданным символом.
+2. Создайте метод, который принимает в параметр строку и число к.
+ В каждом слове текста k-ю букву заменить заданным символом.
 Если k больше длины слова, корректировку не выполнять.
+RTRTRT
      */
+    public static String replaceByIndex(String sentence, int k, char replacement) {
+        final StringBuilder stringBuilder = new StringBuilder();
+        final String[] words = sentence.split(" ");
+        for (String word : words) {
+            if (k < word.length()) {
+               word = word.substring(0, k)
+                        + replacement
+                        + word.substring(k + 1, words.length-1);
 
+            }
+            stringBuilder.append(word);
+            stringBuilder.append(" ");
+        }
+
+        return stringBuilder.toString().trim();
+    }
 }

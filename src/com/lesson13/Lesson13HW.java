@@ -11,5 +11,8 @@ public class Lesson13HW {
 
         String replacedString = StringUtil.replaceAndCount(toReplace);
         System.out.println(replacedString);
+        final String replacedByIndexString =
+                StringUtil.replaceByIndex("Hi I Am Joe", 2, 'X');
+        System.out.println(replacedByIndexString); //"Hi I Am JoX"
     }
 }
