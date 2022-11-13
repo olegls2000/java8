@@ -5,11 +5,11 @@ import com.util.Utils;
 public class Lesson4 {
 
   public static void main(String[] args) {
-    int[] array1 = Utils.generateArray(3, 0, 100);
-    int[] array2 = Utils.generateArray(3, 0, 100);
-    int[] array3 = Utils.generateArray(3, 0, 100);
+    Integer[] array1 = Utils.generateArray(3, 0, 100);
+    Integer[] array2 = Utils.generateArray(3, 0, 100);
+    Integer[] array3 = Utils.generateArray(3, 0, 100);
 
-    int[][] array2d = {array1, array2, array3};
+    Integer[][] array2d = {array1, array2, array3};
     Utils.print2dArray(array2d);
 
     int iMin = 0;

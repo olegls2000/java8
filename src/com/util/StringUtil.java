@@ -24,7 +24,6 @@ public final class StringUtil {
                 .replace("?", " ")
                 .replace(".", " ")
                 .replace(",", " ")
-                .replace(":", ";")
                 .trim();
     }
 
@@ -47,7 +46,6 @@ public final class StringUtil {
             final String clearedWord = cleanWord(word);
             if (startAndEndWithSameLetter(clearedWord)) {
                 System.out.println(clearedWord);
-
             }
         }
     }
@@ -56,11 +54,15 @@ public final class StringUtil {
         if (word == null || word.length() <= 1) {
             return false;
         }
-        char firstCharacter = word.charAt(0);
+        char fistCharacter = word.charAt(0);
         char lastCharacter = word.charAt(word.length() - 1);
-        return firstCharacter == lastCharacter;
+        return fistCharacter == lastCharacter;
     }
 
+    /**
+     * Convert and print all words that start from "L" to upper case
+     * and to lower case that contains "T"
+     */
     public static void convert(String sentence) {
         final String[] words = sentence.split(" ");
         for (String word : words) {
@@ -74,23 +76,64 @@ public final class StringUtil {
         }
     }
 
-    public static void replaceChar(String sentence) {
-        final String[] words = sentence.split(" ");
-        if (sentence.contains(":")) {
-            String result = sentence.replace(":", ";");
-            System.out.println(result);
+    /*
+
+1. Create a method that replaces in the String all ":" by ";"
+and prints out a quantity of such replacements. Place the method into StringUtils class
+     */
+
+    public static String replaceAndCount(String sentence) {
+        int count = 0;
+        for (int i = 0; i < sentence.length(); i++) {
+            final char symbol = sentence.charAt(i);
+            if (symbol == ':') {
+                count++;
+            }
         }
+
+        System.out.println("Number of replacements is: " + count);
+
+        return sentence.replace(":", ";");
     }
 
-    public static void replaceChark(String replaceChar) {
-        final String[] words = replaceChar.split(" ");
-        int k = 1;
-        if (replaceChar.contains("K")) {
-            String resultd = replaceChar.replace("K", "Q");
-            System.out.println(resultd + k);
+    /*
+
+2. Создайте метод, который принимает в параметр строку и число к.
+ В каждом слове текста k-ю букву заменить заданным символом.
+Если k больше длины слова, корректировку не выполнять.
+RTRTRT
+     */
+    public static String replaceByIndex(String sentence, int k, char replacement) {
+        final StringBuilder stringBuilder = new StringBuilder();
+        final String[] words = sentence.split(" ");
+        for (String word : words) {
+            if (k < word.length()) {
+               word = word.substring(0, k)
+                        + replacement
+                        + word.substring(k + 1, words.length-1);
+
+            }
+            stringBuilder.append(word);
+            stringBuilder.append(" ");
         }
-        for (int i = 0; i < replaceChar.length(); i++) {
-            if ()
+
+        return stringBuilder.toString().trim();
+    }
+
+    public static void printString(String string) {
+        System.out.println(string);
+    }
+
+    public static void printString(String string, String string2 ) {
+        System.out.println(string);
+        System.out.println(string2);
+    }
+
+    public static void printVarArgs(String ... strings) {
+        System.out.println(strings);
+        for (String str: strings) {
+            System.out.print(str);
         }
+
     }
 }

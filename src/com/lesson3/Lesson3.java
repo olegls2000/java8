@@ -76,7 +76,7 @@ public class Lesson3 {
         System.out.println(stringArray.length);
         System.out.println(stringArray[1]);
 
-        int[] myArray = new int[30];
+        Integer [] myArray = new Integer[30];
         int delta = 10;
         for (int k = 0; k < myArray.length; k++) {
             myArray[k] = delta;
@@ -85,11 +85,11 @@ public class Lesson3 {
         printArray(myArray);
 
         //fulfill array int (size 40) random numbers (10..30)
-        int[] array1 = generateArray(40, 10, 30);
+        Integer [] array1 = generateArray(40, 10, 30);
        printArray(array1);
 
         //200, 197, 194 ...  10 elements
-        int[] array2 = new int[10];
+        Integer[] array2 = new Integer[10];
         int initialValue = 200;
         for (int k = 0; k < array2.length; k++) {
             array2[k] = initialValue;
@@ -97,7 +97,7 @@ public class Lesson3 {
         }
        printArray(array2);
 
-        int[] randomArray = generateArray(10, -20, 30);
+        Integer[] randomArray = generateArray(10, -20, 30);
         int oddCounter = 0;
         for (int k = 0; k < randomArray.length; k++) {
             if (randomArray[k] % 2 == 0) {
@@ -107,7 +107,7 @@ public class Lesson3 {
         printArray(randomArray);
         System.out.println("Odd element numbers: " + oddCounter);
 
-        int[] randomArray1 = generateArray(10, -20, 20);
+        Integer[] randomArray1 = generateArray(10, -20, 20);
         int negativeCount = 0;
         for (int k = 0; k < randomArray1.length; k++) {
             if (randomArray1[k] < 0) {

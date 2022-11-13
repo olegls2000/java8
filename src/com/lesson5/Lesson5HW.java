@@ -43,7 +43,7 @@ public class Lesson5HW {
 
     //printReport(workers);
      Worker.printFromStatic();
-    int[] array = Utils.generateArray(5, 0, 100);
+    Integer[] array = Utils.generateArray(5, 0, 100);
 
 
   }

@@ -28,7 +28,7 @@ public class Lesson4HW {
 
   public static void printFiboNumbers(int n) {
     // 0, 1, 1, 2, 3, 5, ...
-    int[] fiboArray = new int[n];
+    Integer [] fiboArray = new Integer[n];
     fiboArray[0] = 0;
     fiboArray[1] = 1;
     for (int i = 2; i < fiboArray.length; i++) {
