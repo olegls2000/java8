@@ -55,6 +55,11 @@ public class Circle implements WithPerimeter, WithArea {
     public int getRadius() {
         return this.radius;
     }
+
+    private final void mySuperSECreTMethod(){
+
+        System.out.println("Password is Foo!!! for object with radius: " + radius);
+    }
 }
 
 

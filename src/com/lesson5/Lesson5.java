@@ -19,17 +19,17 @@ public class Lesson5 {
     myFox1 = myFox2;
 
     Car toyota = new Car();
-    System.out.println(toyota.manufacturer);
-    toyota.manufacturer = "TOYOTA";
-    toyota.releaseYear = 2019;
-    toyota.maxSpeed = 180;
+    System.out.println(toyota.getManufacturer());
+    toyota.setManufacturer("TOYOTA");
+    toyota.setReleaseYear(2019);
+   // toyota.maxSpeed = 180;
     //com.util.Utils.getRandomNumberFromInterval(2,5);
     //toyota = null;
     //System.gc();
     Car bmw = new Car(220,
         "BMW",
         2020);
-    System.out.println(bmw.manufacturer);
+   // System.out.println(bmw.manufacturer);
 
     Car shkoda = new Car(
         Utils.getRandomNumberFromInterval(15, 250),
@@ -45,7 +45,7 @@ public class Lesson5 {
     cars[4] = honda;
 
 
-    Car oldest = cars[0];
+/*    Car oldest = cars[0];
     for (int i = 1; i < cars.length; i++) {
       if(cars[i].releaseYear < oldest.releaseYear){
         oldest = cars[i];
@@ -53,7 +53,7 @@ public class Lesson5 {
     }
 
     System.out.println("Oldest com.example.Car is: " + oldest.manufacturer +
-                           " Release year: " + oldest.releaseYear);
+                           " Release year: " + oldest.releaseYear);*/
 
     Fox ff = new Fox();
     ff.age = 4;

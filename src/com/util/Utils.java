@@ -1,6 +1,7 @@
 package com.util;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Utils {
 
@@ -69,33 +70,15 @@ public class Utils {
         return sum;
     }
 
-    public static void arrayListOfNumbers() {
-        ArrayList<Integer> arrayList = new ArrayList<>(1000);
-        for (int i = 0; i < 10; i++) {
-            final Integer randomInt = Utils.getRandomNumberFromInterval(100, 200);
-            System.out.println(randomInt);
+    public static List<Integer> generateList(int size, int from, int till) {
+        final List<Integer> result = new ArrayList<>();
+        for (int i = 0; i < size; i++) {
+            final Integer randomNumber = getRandomNumberFromInterval(from, till);
+            result.add(randomNumber);
         }
-        int min = 0;
-        for (int i = 0; i < arrayList.size(); i++) {
-            if (min > arrayList.size()) {
-                min = arrayList.size();
-                System.out.println("Min is:" + arrayList.size());
-            }
-        }
-        int max = 0;
-        for (int i = 0; i < arrayList.size(); i++) {
-            if (max < arrayList.size()) {
-                max = arrayList.size();
-                System.out.println("Max is:" + arrayList.size());
-            }
-        }
-        int maxJ = 0;
-        int minJ = 0;
-        for (int i = 0; i < arrayList.size(); i++) {
-            if (maxJ < arrayList.size()) {
-                maxJ = minJ;
-                System.out.println("Max is:" + arrayList.size());
-            }
-        }
+        return result;
+
     }
+
+
 }

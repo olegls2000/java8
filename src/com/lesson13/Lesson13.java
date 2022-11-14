@@ -38,7 +38,7 @@ public class Lesson13 {
         integerArrayList.add(789898);
         System.out.println(integerArrayList.size()); // ->4
 
-        Integer variable = integerArrayList.get(5);
+        Integer variable =  integerArrayList.get(5);
 
         ArrayList<Point2d> point2dArrayList = new ArrayList<>();
         point2dArrayList.add(new Point2d(5, 8));
@@ -46,11 +46,16 @@ public class Lesson13 {
         Point2d pointFromCollection = point2dArrayList.get(100007);
 
 
-        LinkedList<Double> doubleLinkedList = new LinkedList<>();
+        LinkedList<Double> doubleLinkedList  = new LinkedList<>();
         doubleLinkedList.add(12.0);  //  Big O(n)
         doubleLinkedList.add(16.0);
         doubleLinkedList.add(19.0);
 
         doubleLinkedList.get(9999);
+
+
+
+
+
     }
 }
