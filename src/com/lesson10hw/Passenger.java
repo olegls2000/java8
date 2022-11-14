@@ -35,4 +35,22 @@ public class Passenger extends AbstractCar {
         seatsCheck(seats);
         this.seats = seats;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Passenger)) return false;
+        if (!super.equals(o)) return false;
+
+        Passenger passenger = (Passenger) o;
+
+        return getSeats() == passenger.getSeats();
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + getSeats();
+        return result;
+    }
 }

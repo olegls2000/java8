@@ -73,4 +73,24 @@ public abstract class AbstractCar {
                 ", manufacturer=" + manufacturer +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof AbstractCar)) return false;
+
+        AbstractCar that = (AbstractCar) o;
+
+        if (getReleaseDate() != that.getReleaseDate()) return false;
+        if (getTechState() != that.getTechState()) return false;
+        return getManufacturer() == that.getManufacturer();
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getReleaseDate();
+        result = 31 * result + getTechState();
+        result = 31 * result + (getManufacturer() != null ? getManufacturer().hashCode() : 0);
+        return result;
+    }
 }

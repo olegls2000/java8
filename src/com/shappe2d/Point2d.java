@@ -34,4 +34,12 @@ public class Point2d {
         result = 31 * result + getY();
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "Point2d{" +
+                "x=" + x +
+                ", y=" + y +
+                '}';
+    }
 }
