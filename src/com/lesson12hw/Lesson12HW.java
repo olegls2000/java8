@@ -1,6 +1,7 @@
 package com.lesson12hw;
 
 import com.util.StringUtil;
+import com.util.Utils;
 
 import static com.util.StringUtil.printSameLetterWord;
 
@@ -19,10 +20,7 @@ public class Lesson12HW {
         StringUtil.printLongestWord(sentence);
         StringUtil.printShortestWord(sentence);
         printSameLetterWord(sentence);
-        "Some String".startsWith("Y");
-        "Some String".contains("Y");
-        "Some String".toLowerCase();
-        "Some String".toUpperCase();
+        Utils.arrayListOfNumbers();
     }
 
 }

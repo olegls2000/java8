@@ -1,6 +1,7 @@
 package com.util;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
 public class Utils {
 
@@ -70,32 +71,42 @@ public class Utils {
     }
 
     public static void arrayListOfNumbers() {
-        ArrayList<Integer> arrayList = new ArrayList<>(1000);
-        for (int i = 0; i < 10; i++) {
-            final Integer randomInt = Utils.getRandomNumberFromInterval(100, 200);
-            System.out.println(randomInt);
+        ArrayList<Integer> arrayList = new ArrayList<>(6);
+        arrayList.add(Utils.getRandomNumberFromInterval(100, 200));
+        arrayList.add(Utils.getRandomNumberFromInterval(100, 200));
+        arrayList.add(Utils.getRandomNumberFromInterval(100, 200));
+        arrayList.add(Utils.getRandomNumberFromInterval(100, 200));
+        arrayList.add(Utils.getRandomNumberFromInterval(100, 200));
+        for (Integer x : arrayList) {
+            System.out.println(x);
         }
         int min = 0;
         for (int i = 0; i < arrayList.size(); i++) {
-            if (min > arrayList.size()) {
-                min = arrayList.size();
-                System.out.println("Min is:" + arrayList.size());
-            }
+            int value = arrayList.get(i);
+            if (value < arrayList.get(min))
+                min = i;
         }
+        System.out.println("Min is: " + arrayList.get(min));
+
         int max = 0;
         for (int i = 0; i < arrayList.size(); i++) {
-            if (max < arrayList.size()) {
-                max = arrayList.size();
-                System.out.println("Max is:" + arrayList.size());
-            }
+            int value = arrayList.get(i);
+            if (value > arrayList.get(max))
+                max = i;
         }
-        int maxJ = 0;
-        int minJ = 0;
-        for (int i = 0; i < arrayList.size(); i++) {
-            if (maxJ < arrayList.size()) {
-                maxJ = minJ;
-                System.out.println("Max is:" + arrayList.size());
-            }
+        System.out.println("Max is: " + arrayList.get(max));
+
+        /* ----------------- */
+
+        int Jmin = arrayList.get(0);
+        int Jmax = arrayList.get(0);
+        for (Integer i : arrayList) {
+            if (i > Jmin)
+                Jmin = i;
+            if (i < Jmax)
+                Jmax = i;
         }
+        System.out.println("минимальное число: " + Jmin);
+        System.out.println("максимальное число: " + Jmax);
     }
 }
