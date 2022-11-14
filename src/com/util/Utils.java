@@ -1,5 +1,7 @@
 package com.util;
 
+import java.util.*;
+
 public class Utils {
 
     public static int smth = 0;
@@ -59,11 +61,23 @@ public class Utils {
         return result;
     }
 
-    public static int getSummFromVarArg( int ... integers) {
+    public static int getSummFromVarArg(int... integers) {
         int sum = 0;
         for (Integer number : integers) {
             sum += number;// sum = sum + number;
         }
         return sum;
     }
+
+    public static List<Integer> generateList(int size, int from, int till) {
+        final List<Integer> result = new ArrayList<>();
+        for (int i = 0; i < size; i++) {
+            final Integer randomNumber = getRandomNumberFromInterval(from, till);
+            result.add(randomNumber);
+        }
+        return result;
+
+    }
+
+
 }
