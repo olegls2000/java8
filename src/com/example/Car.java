@@ -3,7 +3,14 @@ package com.example;
 
 import static com.util.Utils.getRandomNumberFromInterval;
 
-public class Car {
+public class Car /*implements Comparable<Car>*/{
+
+/*    //max speed only!!!!
+    @Override
+    public int compareTo(Car o) {
+        //return o.getMaxSpeed() - this.maxSpeed;
+        return o.getReleaseYear() - this.releaseYear;
+    }*/
 
     public Car() {
         System.out.println("Hello from DEFAULT constructor");
@@ -32,7 +39,40 @@ public class Car {
     }
 
 
-    public int maxSpeed;
-    public String manufacturer;
-    public int releaseYear;
+    private int maxSpeed;
+    private String manufacturer;
+    private int releaseYear;
+
+    public int getMaxSpeed() {
+        return maxSpeed;
+    }
+
+    public void setMaxSpeed(int maxSpeed) {
+        this.maxSpeed = maxSpeed;
+    }
+
+    public String getManufacturer() {
+        return manufacturer;
+    }
+
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
+    public int getReleaseYear() {
+        return releaseYear;
+    }
+
+    public void setReleaseYear(int releaseYear) {
+        this.releaseYear = releaseYear;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "maxSpeed=" + maxSpeed +
+                ", manufacturer='" + manufacturer + '\'' +
+                ", releaseYear=" + releaseYear +
+                '}';
+    }
 }
