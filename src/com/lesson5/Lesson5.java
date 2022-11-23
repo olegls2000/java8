@@ -2,7 +2,6 @@ package com.lesson5;
 
 import com.example.Car;
 import com.example.Fox;
-import com.util.Utils;
 
 public class Lesson5 {
   public static void main(String[] args) {

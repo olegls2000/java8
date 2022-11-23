@@ -1,7 +1,5 @@
 package com.lesson3;
 
-import com.util.Utils;
-
 public class Lesson3HW {
   //
   public static void main(String[] args) {
