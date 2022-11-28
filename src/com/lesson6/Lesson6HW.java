@@ -3,6 +3,7 @@ package com.lesson6;
 import com.shape.Circle;
 import com.shape.Square;
 import com.util.ShapeUtils;
+import com.util.Utils;
 
 public class Lesson6HW {
     public static void main(String[] args) {

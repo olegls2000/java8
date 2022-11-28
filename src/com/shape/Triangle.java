@@ -5,6 +5,26 @@ public class Triangle implements WithPerimeter {
     private int b;
     private int c;
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Triangle)) return false;
+
+        Triangle triangle = (Triangle) o;
+
+        if (a != triangle.a) return false;
+        if (b != triangle.b) return false;
+        return c == triangle.c;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = a;
+        result = 31 * result + b;
+        result = 31 * result + c;
+        return result;
+    }
+
     public Triangle(int a, int b, int c) throws MyCustomException  {
         checkPositive(a);
         checkPositive(b);

@@ -1,7 +1,7 @@
 package com.lesson6;
 
-import com.employe.Developer;
 import com.employe.AbstractEmploy;
+import com.employe.Developer;
 import com.employe.QA;
 
 public class Lesson6 {

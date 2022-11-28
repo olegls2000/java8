@@ -1,8 +1,13 @@
 package com.shappe2d;
 
-public class Point2d {
+public class Point2d implements Comparable<Point2d> {
     private int x;
     private int y;
+
+    @Override
+    public int compareTo(Point2d o) {
+        return (this.x + this.y)  - (o.getX() + o.getY());
+    }
 
     public Point2d(int x, int y) {
         this.x = x;
@@ -42,4 +47,6 @@ public class Point2d {
                 ", y=" + y +
                 '}';
     }
+
+
 }

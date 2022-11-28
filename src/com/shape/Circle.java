@@ -1,7 +1,7 @@
 package com.shape;
 
 
-import static com.util.Utils.*;
+import static com.util.Utils.getRandomNumberFromInterval;
 import static java.lang.Math.PI;
 
 public class Circle implements WithPerimeter, WithArea {
@@ -54,6 +54,11 @@ public class Circle implements WithPerimeter, WithArea {
 
     public int getRadius() {
         return this.radius;
+    }
+
+    private final void mySuperSECreTMethod(){
+
+        System.out.println("Password is Foo!!! for object with radius: " + radius);
     }
 }
 

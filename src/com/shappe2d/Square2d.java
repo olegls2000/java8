@@ -1,8 +1,8 @@
 package com.shappe2d;
 
-import static com.shappe2d.Utils2d.getDistanceBetweenPoints;
-
 import com.shape.WithPerimeter;
+
+import static com.shappe2d.Utils2d.getDistanceBetweenPoints;
 
 public class Square2d implements WithPerimeter {
   private Point2d a;
