@@ -8,7 +8,7 @@ public abstract class AbstractEmploy {
     @NumberRange(min = 600, max = 20_000)
     protected int salary;
 
-    @MyString(startWith = "t", maxSize = 25)
+    @MyString(startWith = "s", maxSize = 55)
     protected String name;
 
     abstract void salaryRecalculate();

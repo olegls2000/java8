@@ -3,7 +3,7 @@ package com.annotation;
 import java.lang.reflect.Field;
 
 //Singleton!!
-public class NumberRangeProcessor {
+public class NumberRangeProcessor implements MyAnnotationProcessor {
 
   private static NumberRangeProcessor instance;
 
@@ -17,6 +17,7 @@ public class NumberRangeProcessor {
   private NumberRangeProcessor() {
   }
 
+  @Override
   public void process(Object fox) throws Exception {
     final Class clazz = fox.getClass();
     final Field[] fields = clazz.getDeclaredFields();
