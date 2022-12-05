@@ -7,7 +7,8 @@ import com.annotation.ProfileExecutor;
 import com.employe.Developer;
 import com.lesson10hw.AmservAutoSalon;
 import com.lesson10hw.AutoSalon;
-import com.shape.Circle;]\]
+import com.shape.Circle;
+
 public class Lesson18 {
   public static void main(String[] args) throws Exception {
     final var numberRangeProcessor = NumberRangeProcessor.getInstance();

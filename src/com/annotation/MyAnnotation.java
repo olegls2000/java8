@@ -10,5 +10,5 @@ import java.lang.annotation.Target;
     ElementType.CONSTRUCTOR,
     ElementType.PARAMETER})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface MyAnnotation {
-}
+public @interface MyAnnotation {}
+
