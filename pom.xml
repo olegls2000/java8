@@ -8,7 +8,7 @@
 
     <groupId>com.bte.dev</groupId>
     <artifactId>java8</artifactId>
-    <version>1.0.21-SNAPSHOT</version>
+    <version>12.1.0</version>
     <packaging>jar</packaging>
 
     <properties>
@@ -52,6 +52,5 @@
             </dependencies>
         </profile>
     </profiles>
-
 
 </project>
