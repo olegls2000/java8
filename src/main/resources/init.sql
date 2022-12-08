@@ -24,3 +24,6 @@ CREATE TABLE client
     address_id    integer     not null,
     constraint FK_client_address foreign key (address_id) references address (id)
 );
+
+ALTER TABLE country
+  add COLUMN population integer;
