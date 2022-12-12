@@ -1,6 +1,7 @@
 package com.lesson22;
 
 
+import com.entity.Country;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -12,6 +13,7 @@ import java.util.List;
 public class Lesson22 {
   public static void main(String[] args) throws SQLException {
     final List<Country> countries = new ArrayList<>();
+
     final String url = "jdbc:postgresql://127.0.0.1:5432/postgres";
     final String username = "admin";
     final String password = "admin";

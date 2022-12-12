@@ -1,4 +1,4 @@
-package com.lesson22;
+package com.entity;
 
 import lombok.Builder;
 import lombok.Getter;
