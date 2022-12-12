@@ -5,6 +5,7 @@ insert into country (name) values('Danemark');
 insert into country (name) values('France');
 insert into country (name) values('Spain');
 insert into country (name) values('Brazil');
+insert into country (name) values('BrazilLLL');
 --commit;
 select * from country;
 --delete from country;
@@ -125,8 +126,10 @@ LEFT JOIN country cn ON ad.country_id = cn.id
 where cn.name IN ('Estonia', 'Finland', 'France')
 ;
 
+select * from address where city = 'Helsinki';
 
-
+SELECT * FROM address where city = 'Helsinki' OR 'a'='a';
+SELECT * FROM address where city = 'X' OR 'a'='a';
 
 
 
