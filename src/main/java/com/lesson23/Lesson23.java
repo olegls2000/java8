@@ -1,7 +1,7 @@
 package com.lesson23;
 
-import com.daojdbc.AddressCrudDao;
-import com.daojdbc.CountryCrudDao;
+import com.dao.jdbc.AddressCrudDao;
+import com.dao.jdbc.CountryCrudDao;
 import com.entity.Address;
 import com.entity.Country;
 import java.util.List;
@@ -24,7 +24,7 @@ public class Lesson23 {
     System.out.println("SQL INJECTION RESULT: ");
     System.out.println("Address by city: "+ addressesByCity);
 
-    countryCrudDao.delete(Country.builder().id(11l).build());
+    //countryCrudDao.delete(Country.builder().id(11l).build());
 
   }
 }

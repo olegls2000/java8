@@ -1,4 +1,8 @@
-package com.daojdbc;
+package com.dao.jdbc;
+
+import static com.dao.jdbc.ConnectionProvider.BD_PASSWORD;
+import static com.dao.jdbc.ConnectionProvider.BD_URL;
+import static com.dao.jdbc.ConnectionProvider.BD_USER;
 
 import com.dao.CrudDao;
 import com.entity.Country;
@@ -11,6 +15,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CountryCrudDao implements CrudDao<Country> {
+  private ConnectionProvider connectionProvider
+      = ConnectionProvider.getInstance();
+
   @Override
   public List<Country> selectAll() {
     final List<Country> countries = new ArrayList<>();
@@ -25,11 +32,11 @@ public class CountryCrudDao implements CrudDao<Country> {
         ResultSet resultSet = statement.executeQuery(selectAllCountries)
     ) {
       while (resultSet.next()) {
-        countries.add(Country.builder()
+        countries.add(null/*Country.builder()
             .id(resultSet.getLong("id"))
             .name(resultSet.getString("name"))
             .population(resultSet.getLong("population"))
-            .build());
+            .build()*/);
       }
     } catch (SQLException e) {
       e.printStackTrace();
@@ -40,9 +47,12 @@ public class CountryCrudDao implements CrudDao<Country> {
 
   @Override
   public void create(Country objectToInsert) {
-    final String url = "jdbc:postgresql://127.0.0.1:5432/postgres";
-    final String username = "admin";
-    final String password = "admin";
+    final String url = connectionProvider
+        .getConnectionProperties().getProperty(BD_URL);
+    final String username = connectionProvider
+        .getConnectionProperties().getProperty(BD_USER);
+    final String password = connectionProvider
+        .getConnectionProperties().getProperty(BD_PASSWORD);
     final var insertQuery =
         String.format("insert into country (name, population) values('%s', %d)",
             objectToInsert.getName(), objectToInsert.getPopulation());
@@ -59,9 +69,12 @@ public class CountryCrudDao implements CrudDao<Country> {
 
   @Override
   public void delete(Country toDelete) {
-    final String url = "jdbc:postgresql://127.0.0.1:5432/postgres";
-    final String username = "admin";
-    final String password = "admin";
+    final String url = connectionProvider
+        .getConnectionProperties().getProperty(BD_URL);
+    final String username = connectionProvider
+        .getConnectionProperties().getProperty(BD_USER);
+    final String password = connectionProvider
+        .getConnectionProperties().getProperty(BD_PASSWORD);
     try (
         final var connection = DriverManager.getConnection(url, username, password);
         final var statement =
