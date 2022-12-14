@@ -21,9 +21,9 @@ public class CountryCrudDao implements CrudDao<Country> {
   @Override
   public List<Country> selectAll() {
     final List<Country> countries = new ArrayList<>();
-    final String url = "jdbc:postgresql://127.0.0.1:5432/postgres";
-    final String username = "admin";
-    final String password = "admin";
+    final String url = connectionProvider.getConnectionProperties().getProperty(BD_URL);
+    final String username = connectionProvider.getConnectionProperties().getProperty(BD_USER);
+    final String password = connectionProvider.getConnectionProperties().getProperty(BD_PASSWORD);
     final String selectAllCountries = "SELECT * FROM country";
 
     try (
@@ -32,11 +32,11 @@ public class CountryCrudDao implements CrudDao<Country> {
         ResultSet resultSet = statement.executeQuery(selectAllCountries)
     ) {
       while (resultSet.next()) {
-        countries.add(null/*Country.builder()
+        countries.add(Country.builder()
             .id(resultSet.getLong("id"))
             .name(resultSet.getString("name"))
             .population(resultSet.getLong("population"))
-            .build()*/);
+            .build());
       }
     } catch (SQLException e) {
       e.printStackTrace();

@@ -35,20 +35,20 @@ public class AddressCrudDao implements CrudDao<Address> {
         final var resultSet = statement.executeQuery(selectAllQuery)
     ) {
       while (resultSet.next()) {
-        /*final Country country = Country.builder()
+        final Country country = Country.builder()
             .id(resultSet.getLong(7))
             .name(resultSet.getString(8))
             .population(resultSet.getLong(9))
-            .build();*/
+            .build();
 
-        final Address address = null;/*Address.builder()
+        final Address address = Address.builder()
             .id(resultSet.getLong(1))
             .city(resultSet.getString("city"))
             .street(resultSet.getString("street"))
             .house(resultSet.getString("house"))
             .zip(resultSet.getInt("zip"))
-            .country(country)
-            .build();*/
+            //.country(country)
+            .build();
         result.add(address);
       }
     } catch (SQLException e) {
