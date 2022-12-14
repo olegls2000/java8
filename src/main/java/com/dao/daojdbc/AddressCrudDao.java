@@ -1,4 +1,4 @@
-package com.daojdbc;
+package com.dao.daojdbc;
 
 import com.dao.CrudDao;
 import com.entity.Address;
@@ -8,8 +8,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.daojdbc.ConnectionProvider.BD_URL;
-import static com.daojdbc.ConnectionProvider.BD_USER;
+import static com.dao.daojdbc.ConnectionProvider.BD_URL;
+import static com.dao.daojdbc.ConnectionProvider.BD_USER;
 
 public class AddressCrudDao implements CrudDao<Address> {
     private ConnectionProvider connectionProvider = new ConnectionProvider();

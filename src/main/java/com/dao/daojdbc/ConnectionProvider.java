@@ -1,4 +1,4 @@
-package com.daojdbc;
+package com.dao.daojdbc;
 
 import java.io.IOException;
 import java.io.InputStream;

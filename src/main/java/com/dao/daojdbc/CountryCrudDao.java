@@ -1,4 +1,4 @@
-package com.daojdbc;
+package com.dao.daojdbc;
 
 import com.dao.CrudDao;
 import com.entity.Country;

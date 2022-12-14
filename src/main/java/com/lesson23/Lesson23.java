@@ -1,7 +1,7 @@
 package com.lesson23;
 
-import com.daojdbc.AddressCrudDao;
-import com.daojdbc.CountryCrudDao;
+import com.dao.daojdbc.AddressCrudDao;
+import com.dao.daojdbc.CountryCrudDao;
 import com.entity.Address;
 import com.entity.Country;
 
