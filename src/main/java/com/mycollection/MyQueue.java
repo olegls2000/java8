@@ -90,8 +90,6 @@ public class MyQueue implements Queue {
         return true;
     }
 
-
-
     @Override
     public boolean addAll(Collection c) {
         return false;

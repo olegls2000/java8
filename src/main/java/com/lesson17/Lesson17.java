@@ -73,11 +73,7 @@ public class Lesson17 {
         constructor.newInstance();
         constructor.newInstance("FooString", 20d);
 
-        Method MethodFoo = null;
-        MethodFoo.getClass(LessonHW.Foo);
-
     }
-
 
     private static Constructor getDefaultConstructor(Class clazz) {
         for (Constructor constructor : clazz.getConstructors()) {
@@ -87,5 +83,4 @@ public class Lesson17 {
         }
         return null;
     }
-
 }

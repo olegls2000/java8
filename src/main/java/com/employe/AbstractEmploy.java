@@ -1,7 +1,14 @@
 package com.employe;
 
+import com.annotation.MyString;
+import com.annotation.NumberRange;
+
 public abstract class AbstractEmploy {
+
+    @NumberRange(min = 600, max = 20_000)
     protected int salary;
+
+    @MyString(startWith = "s", maxSize = 55)
     protected String name;
 
     abstract void salaryRecalculate();
