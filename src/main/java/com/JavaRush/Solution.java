@@ -1,39 +1,58 @@
 package com.JavaRush;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Solution {
-    public static int[] numbers = new int[10];
 
     public static void main(String[] args) {
-        init();
-        print();
-
-        reverse();
-        print();
+        System.out.println(getMonthByIndex(4));
+        System.out.println(getMonthByIndex(8));
+        System.out.println(getMonthByIndex(12));
     }
 
-    public static void init() {
-        for (int i = 0; i < 10; i++) {
-            numbers[i] = i;
+    public static String getMonthByIndex(int month) {
+        String monthString;
+        switch (month) {
+            case 1:
+                monthString = "Январь";
+                break;
+            case 2:
+                monthString = "Февраль";
+                break;
+            case 3:
+                monthString = "Март";
+                break;
+            case 4:
+                monthString = "Апрель";
+                break;
+            case 5:
+                monthString = "Май";
+                break;
+            case 6:
+                monthString = "Июнь";
+                break;
+            case 7:
+                monthString = "Июль";
+                break;
+            case 8:
+                monthString = "Август";
+                break;
+            case 9:
+                monthString = "Сентябрь";
+                break;
+            case 10:
+                monthString = "Октябрь";
+                break;
+            case 11:
+                monthString = "Ноябрь";
+                break;
+            case 12:
+                monthString = "Декабрь";
+                break;
+            default:
+                monthString = "Недействительный месяц";
+                break;
         }
-    }
-
-    public static void reverse() {
-        int n = numbers.length - 1;
-        for (int i = 0; i < numbers.length / 2; i++) {
-            int temp = numbers[i];
-            numbers[i] = numbers[n - i];
-            numbers[n - i] = temp;
-        }
-    }
-
-    private static void print() {
-        for (int number : numbers) {
-            System.out.println(number);
-        }
+        return monthString;
     }
 }
